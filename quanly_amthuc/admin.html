@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Đồ ăn</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container overflow-auto py-3">
+        <form class="p-2">
+            <h1 class="text-center">Hệ thống sản phẩm đồ ăn Việt Nam</h1>
+            <label for="inputName">Tên Sản phẩm:</label>
+            <input id="inputName" type="text" class="form-control my-1">
+            <div id="alertName" class="d-none alert alert-danger py-2 mb-2">Lỗi - Chữ đầu viết hoa<br>Ví dụ: Hoang</div>
+            <label for="inputPrice">Gía món ăn:</label>
+            <input id="inputPrice" type="number" class="form-control my-1">
+            <div id="alertPrice" class="d-none alert alert-danger py-2 mb-2">Gía nhập số. Không được nhập chữ<br>Ví dụ: 1000</div>
+            <label for="inputCategory">Sản Phẩm thức ăn hiện có:</label>
+            <select id="inputCategory" class="form-select mt-1 mb-2">
+                <option value="ga">Gà</option>
+                <option value="banhtrang" selected>Bánh tráng thịt heo</option>
+                <option value="banhxxeo">Bánh xèo</option>
+            </select>
+            <div id="alertCategory" class="d-none alert alert-danger py-2 mb-2">Bạn chọn 1 món</div>
+            <label for="inputCondition">Tình trạng món ăn (ĐÁNH GIÁ):</label>
+            <select id="inputCondition" class="form-select mt-1 mb-3">
+                <option class="bg-success text-white" value="Rất ngon">Rất ngon</option>
+                <option class="bg-warning text-white" value="Bình thường" selected>Bình thường</option>
+                <option class="bg-danger text-white" value="Dở">Dở</option>
+            </select>
+            <div id="alertCondition" class="d-none alert alert-danger py-2 mb-2">Bạn chọn 1 món</div>
+            <div class="text-center w-100">
+                <button id="btnAdd" class="btn mb-1 mb-sm-0 btn-success text-white" type="button">Thêm Món</button>
+                <button id="btnClear" class="btn mb-1 mb-sm-0 btn-outline-success" type="button">Xóa tất cả value trong form (clear value fill)</button>
+            </div>
+            <input id="inputSearch" class="form-control my-4" placeholder="Tìm kiếm theo tên món ăn..." type="search">
+        </form>
+        <table class="table table-striped text-center p-2">
+            <thead>
+                <th>STT</th>
+                <th>Tên Món</th>
+                <th>Gia</th>
+                <th>Món ăn</th>
+                <th>Tình trạng</th>
+                <th>Chức năng</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script src="JS/index.js"></script>
+</body>
+</html>
